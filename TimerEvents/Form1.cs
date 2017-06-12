@@ -12,14 +12,12 @@ namespace TimerEvents
 {
     public partial class Form1 : Form
     {
+        System.Windows.Forms.Timer t;
+
         public Form1()
         {
             InitializeComponent();
-
-            
         }
-        ProgressBar progressBar = new ProgressBar();
-        System.Windows.Forms.Timer t;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -31,8 +29,8 @@ namespace TimerEvents
 
         void t_Tick(object sender, EventArgs e)
         {
-            progressBar.Value += 10;
-            if (progressBar.Value >= 100) t.Stop();
+            progressBar1.Value += 10;
+            if (progressBar1.Value >= 100) t.Stop();
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
